@@ -12,8 +12,8 @@ for (var i = 0; i < topics.length; i ++){
 
 }
 
-$("#addGifButton").on("click", function(event){
-    event.preventDefault();
+
+$(document).on("click", ".sports-button", function(){
 
     var sports = $(this).attr("data-sports");
 
@@ -25,24 +25,26 @@ $("#addGifButton").on("click", function(event){
         // console.log(queryURL);
         // console.log(response);
 
-        var result = response.data;
+        var results = response.data;
+        // console.log(results);
+        var resultDiv = $("<div class='displayResult'>");
 
-        for (var j = 0; j < result.length; j++){
+        for (var j = 0; j < results.length; j++){
 
-            var sportsDiv = $("<div>");
+            var innerDiv = $("<div class='displayResult'>")
 
-            var p = $("p").text("Rating: " + result[i].rating);
+            var rating = results[j].rating;
+
+            var p = $("<p>").text("Rating: " + rating);
             
-            var sportsImage = $("<img>");
-            sportsImage.attr("src", result[i].images.fixed_height.url);
+            var sportsImage = $("<img class = 'result'>");
+            sportsImage.attr("src", results[j].images.fixed_height.url);
 
-            sportsDiv.append(p);
-            sportsDiv.append(sportsImage);
-
-            $("#SportsGroup").prepend(sportsDiv);
+            innerDiv.prepend(p);
+            innerDiv.prepend(sportsImage);
+            resultDiv.prepend(innerDiv);
         
         }
-
 
     })
 });
