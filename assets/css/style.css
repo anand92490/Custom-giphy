@@ -21,6 +21,7 @@ body{
 }
 
 .sports-button{
+   
     padding: 10px 20px;
     border-radius: 15px;
     margin: 5px;
@@ -36,4 +37,18 @@ body{
     
 
 }
+.displayResult{
+  
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-top:20px;
+    margin-left:20px;
+
+}
+
+P{
+text-transform: uppercase;	
+}
+
 
