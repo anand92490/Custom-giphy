@@ -39,12 +39,17 @@ $(document).on("click", ".sports-button", function(){
             
             var sportsImage = $("<img class = 'result'>");
             sportsImage.attr("src", results[j].images.fixed_height.url);
+            sportsImage.attr("data-state", "still");
+            sportsImage.attr("data-still", results[j].images.fixed_height_still.url);
+            sportsImage.attr("data-animate", results[j].images.fixed_height.url);
 
-            innerDiv.prepend(p);
             innerDiv.prepend(sportsImage);
+            innerDiv.prepend(p);
             resultDiv.prepend(innerDiv);
         
         }
 
-    })
+        $("#all-button").append(resultDiv);
+
+    });
 });
