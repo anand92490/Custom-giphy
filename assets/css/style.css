@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(240, 212, 159);
+    font-family:'Courier New', Courier, monospace;
+}
+
+#header{ 
+    font-size: 40px;
+    margin-bottom: 15px;  
+    color: rgb(150, 80, 40);
+    font-weight: bold;
+    
+}
+
+.sports-button:hover{
+    cursor: pointer;
+    font-size: 17px;
+    margin: 7px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: rgba(172, 93, 57, 0.726); 
+    color: white;
+}
+
+.sports-button{
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: rgba(180, 107, 73, 0.726); 
+
+}
+
+
+#addGifButton{
+    cursor: pointer;
+    margin-top: 10px;
+    
+
+}
+

@@ -1,6 +1,6 @@
 
 
-var topics = ["basketball", "football", "soccer", "baseball", "cricket", "ice hockey", "volleyball", "gymnastics", "snow boarding", "swimming"];
+var topics = ["basketball", "football", "soccer", "baseball", "cricket", "ice hockey", "volleyball", "gymnastics", "snow boarding", "rock climbing"];
 
 
 for (var i = 0; i < topics.length; i ++){
@@ -11,6 +11,21 @@ for (var i = 0; i < topics.length; i ++){
     $("#all-button").append(button);
 
 }
+
+$("#addGifButton").on("click", function (event){
+    event.preventDefault();
+
+    var gifInput = $("#newGifInput").val().trim();
+    topics.push(gifInput);
+
+    var createdButton = $("<button>").text(gifInput);
+    createdButton.attr("data-sports", gifInput);
+    createdButton.addClass("sports-button");
+    $("#all-button").append(createdButton);
+    $("#addGifButton").val('');
+
+
+});
 
 
 $(document).on("click", ".sports-button", function(){
@@ -49,7 +64,7 @@ $(document).on("click", ".sports-button", function(){
         
         }
 
-        $("#all-button").append(resultDiv);
+        $("#all-button").prepend(resultDiv);
 
     });
 });
