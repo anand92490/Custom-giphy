@@ -1,4 +1,4 @@
-# Custom-giphy
+# Custom-giphy (Sports Theme)
 
 Embedding the giphy API on the application that displays gifs of users choice.
 
